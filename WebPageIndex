@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = "stylesheet"
+   type = "text/css"
+   href = "Styling.css" />
+<style>
+a:link {
+color: #4286f4 ;
+}
+a:visited {
+color: red ;
+}
+ a:hover {
+  color: green ;
+  background-color: black ;
+
+
+
+</style>
+<script type="text/javascript">
+var gameImg = "razer.png";
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i}; 
+    return i;
+}
+
+
+
+function animate() {
+if (gameImg=="razer.png")
+gameImg="mario.png";
+else
+gameImg="razer.png";
+document.getElementById("divGame").src = gameImg;
+window.setTimeout(animate, 1000);
+}
+
+
+</script>
+</head>
+<table border="1">
+<tr>
+
+
+
+<td colspan="3" bgcolor="82e0aa" width="1150" height="150" align="center"  > <body   onload="startTime()"  onLoad="animate()"   > 
+<div id="txt" style="padding:5px;background-color:black; color:green; position:absolute;top:130px;right:500px;"></div>
+
+<div  style='position:absolute;  left:10px; top:10px'><img  height="150" width="150" id='imgGame'
+src='razer.png'></div>
+
+</body> <head size="100">
+ 
+
+
+
+<img height="150" width="150"  align="right" src="case.png">
+<img height="50" width="50" align="center" src="controller.png"  ><b style="color:blue;">Games and Stuff!</b></head> <p>Welcome to our shop!</p>  </td>
+</tr>
+<tr>
+
+
+
+<td bgcolor="45b39d" width="250" height="400" align="center" >Navigation Area
+<ul id="navigation">
+ 
+<li><a  href ="about.shtml"  >About us</a></li>
+<li><a href ="contact.shtml" >Contact information</a></li>
+<li><a href ="offers.shtml" >Special offers</a></li>
+<li><a href ="links.shtml" >Useful links</a></li>
+<li><a href ="phonebook.shtml" >Phonebook</a></li>
+<li><a href ="game.shtml" >Lunar Lander</a></li>
+<li><a href ="phpContact.shtml" >Contact form PHP</a></li>
+<li><a href ="cloudFiles.shtml" >Cloud Text Editor</a></li>
+</ul>
+</td>
+
+
+
+<td bgcolor="45b39d" width="650" height="400" align="center" > 
+Welcome to Games and Stuff! Your one stop shop for all your gaming needs! We have the latest games and gaming equipment!</td>
+
+
+
+
+<td bgcolor="45b39d" width="250" height="400" > <img height="150" width="250"  align="top" src="player1.jpg">
+<img height="100" width="250"  align="center" src="controllers.jpg">
+<img height="150" width="250"  align="bottom" src="player2.jpg">
+</td>
+
+
+
+</tr>
+<tr>
+<td colspan="3" bgcolor="#82e0aa" width="1150"height="150" align="center" color="green">EMBRACE THE GAME</td>
+</tr>
+</table>
+</html>
